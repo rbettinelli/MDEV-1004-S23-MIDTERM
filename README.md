@@ -1,3 +1,5 @@
-# MDEV1004-S23-ICE5
+# MDEV1004-S23-MIDTERM
 ## Robert Bettinelli 
-### Demo project for in-Class Ex. 5 Summer 2023 @ GC
+### MidTerm for Summer 2023 @ GC
+
+Books Mongo DB Atlas (Online)

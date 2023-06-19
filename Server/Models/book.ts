@@ -29,6 +29,7 @@ interface IBook {
 // Mongo DB schema Setup
 let bookSchema = new Schema<IBook>({
     bookID: Number,
+    title: String,
     authors: [String],
     genres: [String],
     country: String,

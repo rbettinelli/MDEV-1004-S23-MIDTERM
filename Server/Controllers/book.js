@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DeleteBook = exports.UpdateBook = exports.AddBook = exports.DisplayBookByID = exports.DisplayBookListTitle = exports.DisplayBookList = void 0;
 const book_1 = __importDefault(require("../Models/book"));
 function SanitizeStringToArray(unsanitizedString) {
-    console.log(unsanitizedString);
     let unsanitizedArray = unsanitizedString.split(",");
     let sanitizedArray = Array();
     for (const unsanitizedString of unsanitizedArray) {
@@ -48,7 +47,6 @@ function DisplayBookByID(req, res, next) {
 }
 exports.DisplayBookByID = DisplayBookByID;
 function AddBook(req, res, next) {
-    console.log(req.body.bookID);
     let genres = SanitizeStringToArray(req.body.genres);
     let authors = SanitizeStringToArray(req.body.authors);
     let book = new book_1.default({

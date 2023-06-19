@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 let bookSchema = new mongoose_1.Schema({
     bookID: Number,
+    title: String,
     authors: [String],
     genres: [String],
     country: String,

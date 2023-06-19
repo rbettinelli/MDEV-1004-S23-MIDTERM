@@ -12,11 +12,9 @@ import { Request, Response, NextFunction } from 'express';
 import Book from '../Models/book';
 
 // UTILITY
-// Takes Array and removes spaces @ Front and End
+// Takes String And Splits to Array, removes spaces @ Front and End
 function SanitizeStringToArray(unsanitizedString: String): string[]
 {
-
-    console.log(unsanitizedString);
     let unsanitizedArray: string[] = unsanitizedString.split(",");
     let sanitizedArray: string[] = Array<string>();
     for (const unsanitizedString of unsanitizedArray) 
@@ -77,7 +75,6 @@ export function DisplayBookByID(req: Request, res: Response, next: NextFunction)
 // Add to MongoDB and Returns Move output.
 export function AddBook(req: Request, res: Response, next: NextFunction): void
 {
-    console.log(req.body.bookID);
     // This section will take in-line Entry and Splits then Sanitizes
     // For unlimited Array of items.
     let genres = SanitizeStringToArray(req.body.genres);
